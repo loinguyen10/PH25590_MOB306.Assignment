@@ -1,0 +1,20 @@
+{
+  "shop": [
+    {
+      "id": "1",
+      "name": "cua hang",
+      "addreas": "thanh xuan",
+      "phone": "0987654321",
+      "logo": "https://i.imgur.com/y4sVXXk.jpg",
+      "status": 1
+    },
+    {
+      "id": "3",
+      "name": "lazada",
+      "addreas": "tren mang",
+      "phone": "0123456789",
+      "logo": "https://i.imgur.com/0aXxbKl.jpg",
+      "status": 1
+    }
+  ]
+}

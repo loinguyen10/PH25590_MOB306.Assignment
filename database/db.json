@@ -1,0 +1,30 @@
+{
+    "shop": [
+        {
+            "id":"1",
+            "name":"cua hang",
+            "addreas":"thanh xuan",
+            "phone":"0987654321",
+            "logo":"",
+            "status": 1
+        },
+
+        {
+            "id":"2",
+            "name":"shopee",
+            "addreas":"cau giay",
+            "phone":"0987654321",
+            "logo":"",
+            "status": 0
+        },
+
+        {
+            "id":"3",
+            "name":"lazada",
+            "addreas":"tren mang",
+            "phone":"0123456789",
+            "logo":"",
+            "status": 1
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Image, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { API_SHOP } from '../api';
 
 const styles = StyleSheet.create({
     text: {
@@ -51,7 +52,7 @@ const SuaText = (props) => {
     const navigation = props.navigation;
     const route = props.route;
     // const { item, list, setList } = route.params;
-    const editData = route.params?.editData ;
+    const editData = route.params?.editData;
 
     // const saveTest = (data = {}) => { navigation.navigate("User", data) };
 
@@ -105,32 +106,52 @@ const SuaText = (props) => {
 
     const [selected, setSelected] = useState(0);
 
-    // const onEdit = (editItem) => { //edit cũ
-    //     // const editItem = list.find(item => item.id == editId); //tìm item
-    //     //Show lên textInput
-    //     setNameInput(editItem.name);
-    //     setAddreasInput(editItem.addreas);
-    //     setPhoneInput(editItem.phone);
-    //     setLogoInput(editItem.logo);
-    //     setStatusInput(editItem.status);
-    //     setEditingId(editItem.Id);
+    const onEdit = (editItem) => {
+        //Show lên textInput
+        setNameInput(editItem.name);
+        setAddreasInput(editItem.addreas);
+        setPhoneInput(editItem.phone);
+        setLogoInput(editItem.logo);
+        setStatusInput(editItem.status);
+        setEditingId(editItem.Id);
 
-    //     if(editItem.status == 0){
-    //         setIsEnabled(false);
-    //     }
-    //     if(editItem.status == 1){
-    //         setIsEnabled(true);
-    //     }
+        if (editItem.status == 0) {
+            setIsEnabled(false);
+        }
+        if (editItem.status == 1) {
+            setIsEnabled(true);
+        }
 
-    // }
+    }
+
+    const onSave = () => {
+        const newData = { 
+            name: setName,
+            addreas: setAddreas,
+            phone: setPhone,
+            logo: setLogo,
+            status: isEnabled ? 1 : 0,
+         };
+
+        fetch(
+            !editData ? API_SHOP : API_SHOP + '/' + editData.id,
+            {
+                method: !editData ? 'POST' : 'PUT',
+                body: JSON.stringify(newData),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }).then(res => navigation.goBack())
+    };
 
 
     useEffect(() => {
-        if (item) {
-            onEdit(item);
-            setEditingId(item.id);
+        if (editData) {
+            onEdit(editData);
+            // setEditingId(editData.id);
         }
-    }, []);
+    }, [editData?.id]);
 
     return (
         <View>
@@ -168,7 +189,7 @@ const SuaText = (props) => {
                 />
             </View>
 
-            <View style={styles.txt}>
+            {/* <View style={styles.txt}>
                 <Text> Trạng thái: </Text>
                 <TextInput
                     placeholder='status'
@@ -176,7 +197,7 @@ const SuaText = (props) => {
                     style={styles.text}
                     onChangeText={(text) => setStatusInput(text)}
                 />
-            </View>
+            </View> */}
 
             <View style={styles.txt}>
                 <Text> Trạng thái: </Text>

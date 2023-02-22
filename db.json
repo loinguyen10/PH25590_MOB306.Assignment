@@ -1,12 +1,12 @@
 {
   "shop": [
     {
-      "id": "1",
       "name": "cua hang",
       "addreas": "thanh xuan",
-      "phone": "0987654321",
+      "phone": "09876543214444",
       "logo": "https://i.imgur.com/y4sVXXk.jpg",
-      "status": 1
+      "status": 0,
+      "id": "1"
     },
     {
       "id": "3",
@@ -15,6 +15,14 @@
       "phone": "0123456789",
       "logo": "https://i.imgur.com/0aXxbKl.jpg",
       "status": 1
+    },
+    {
+      "name": "",
+      "addreas": "",
+      "phone": "",
+      "logo": "",
+      "status": 0,
+      "id": "KJpciB3"
     }
   ]
 }

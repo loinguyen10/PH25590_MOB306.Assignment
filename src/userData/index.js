@@ -48,7 +48,7 @@ const User = (props) => {
 
   const route = props.route;
   // const listData = route.params.listData;
-  // const trangThaiManHinh = useIsFocused();
+  const trangThaiManHinh = useIsFocused();
 
   const [list, setList] = useState([]); //set list có item
 
@@ -60,7 +60,9 @@ const User = (props) => {
   // }
 
   const onDelete = (deleteId) => { //new
-    fetch(API_SHOP + '/' + deleteId,{method: 'delete'})
+    fetch(API_SHOP + '/' + deleteId,
+    // fetch(`${API_SHOP}/${deleteId}`,
+      {method: 'delete'})
       .then(res => getList())
   };
 
@@ -80,7 +82,7 @@ const User = (props) => {
 
   useEffect(() => {
     getList();
-  }, []);
+  }, [trangThaiManHinh]);
 
   return (
 

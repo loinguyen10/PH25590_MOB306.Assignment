@@ -2,29 +2,38 @@
     "shop": [
         {
             "id":"1",
-            "name":"cua hang",
-            "addreas":"thanh xuan",
+            "name":"Valorant",
+            "addreas":"Việt Nam",
             "phone":"0987654321",
-            "logo":"",
+            "logo":"https://i.imgur.com/y4sVXXk.jpg",
             "status": 1
         },
-
+  
         {
             "id":"2",
-            "name":"shopee",
-            "addreas":"cau giay",
+            "name":"Cyberpunk",
+            "addreas":"NightCity 2077",
             "phone":"0987654321",
-            "logo":"",
+            "logo":"https://i.imgur.com/17OhHah.jpg",
             "status": 0
         },
-
+  
         {
             "id":"3",
-            "name":"lazada",
-            "addreas":"tren mang",
+            "name":"FIFA",
+            "addreas":"USA",
             "phone":"0123456789",
-            "logo":"",
+            "logo":"https://i.imgur.com/0aXxbKl.jpg",
             "status": 1
-        }
+        },
+  
+        {
+          "id":"4",
+          "name":"Doraemon",
+          "addreas":"Nhật Bản",
+          "phone":"0446374859",
+          "logo":"https://i.imgur.com/KCfJPbN.jpg",
+          "status": 0
+      }
     ]
-}
+  }

@@ -80,6 +80,14 @@ const User = (props) => {
       .catch((err) => console.log(err)) // khi call thất bại thì vào catch
   };
 
+  const statuss = (stt) => {
+    if(stt == 1){
+      return "23";
+    }else{
+      return "00";
+    }
+  }
+
   useEffect(() => {
     getList();
   }, [trangThaiManHinh]);
@@ -106,7 +114,7 @@ const User = (props) => {
               <Text style={{ color: 'white' }}>Tên cửa hàng: {item.name}</Text>
               <Text style={{ color: 'white' }}>Địa chỉ: {item.addreas}</Text>
               <Text style={{ color: 'white' }}>SĐT: {item.phone}</Text>
-              <Text style={{ color: 'white' }}>Trạng thái: {item.status}</Text>
+              <Text style={{ color: 'white' }}>Trạng thái: {statuss(item.status)}</Text>
 
             </View>
             <View>

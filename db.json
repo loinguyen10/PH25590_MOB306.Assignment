@@ -1,28 +1,12 @@
 {
   "shop": [
     {
-      "name": "cua hang",
-      "addreas": "thanh xuan",
-      "phone": "09876543214444",
-      "logo": "https://i.imgur.com/y4sVXXk.jpg",
-      "status": 0,
-      "id": "1"
-    },
-    {
-      "id": "3",
-      "name": "lazada",
-      "addreas": "tren mang",
-      "phone": "0123456789",
-      "logo": "https://i.imgur.com/0aXxbKl.jpg",
-      "status": 1
-    },
-    {
       "name": "",
       "addreas": "",
       "phone": "",
       "logo": "",
-      "status": 0,
-      "id": "KJpciB3"
+      "status": 1,
+      "id": 1
     }
   ]
 }
